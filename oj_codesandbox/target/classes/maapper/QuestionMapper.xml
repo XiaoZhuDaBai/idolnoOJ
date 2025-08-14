@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="oj.oj_codesandbox.mapper.QuestionMapper">
+
+    <resultMap id="BaseResultMap" type="oj.oj_codesandbox.model.dto.Question">
+        <id property="questionId" column="question_id" jdbcType="VARCHAR"/>
+        <result property="questionName" column="question_name" jdbcType="VARCHAR"/>
+        <result property="questionType" column="question_type" jdbcType="TINYINT"/>
+        <result property="addTime" column="add_time" jdbcType="TIMESTAMP"/>
+        <result property="author" column="author" jdbcType="VARCHAR"/>
+        <result property="difficulty" column="difficulty" jdbcType="TINYINT"/>
+        <result property="questionTag" column="question_tag" jdbcType="VARCHAR"/>
+        <result property="timeLimit" column="time_limit" jdbcType="BIGINT"/>
+        <result property="memoryLimit" column="memory_limit" jdbcType="BIGINT"/>
+        <result property="stackLimit" column="stack_limit" jdbcType="BIGINT"/>
+        <result property="questionDescription" column="question_description" jdbcType="LONGVARCHAR"/>
+        <result property="questionInputDescription" column="question_input_description" jdbcType="VARCHAR"/>
+        <result property="questionOutputDescription" column="question_output_description" jdbcType="VARCHAR"/>
+        <result property="questionExamples" column="question_examples" jdbcType="LONGVARCHAR"/>
+        <result property="questionSource" column="question_source" jdbcType="VARCHAR"/>
+        <result property="questionCommits" column="question_commits" jdbcType="INTEGER"/>
+        <result property="ac" column="ac" jdbcType="INTEGER"/>
+        <result property="modifyTime" column="modify_time" jdbcType="TIMESTAMP"/>
+        <result property="status" column="status" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        question_id,question_name,question_type,
+        add_time,author,difficulty,
+        question_tag,time_limit,memory_limit,
+        stack_limit,question_description,question_input_description,
+        question_output_description,question_examples,question_source,
+        question_commits,ac,modify_time,
+        status
+    </sql>
+
+    <insert id="insert" parameterType="oj.oj_codesandbox.model.dto.Question">
+        insert into question (question_name,question_type,
+                              add_time,author,difficulty,
+                              question_tag,time_limit,memory_limit,
+                              stack_limit,question_description,question_input_description,
+                              question_output_description,question_examples,question_source,
+                              question_commits,ac,modify_time,
+                              status)
+        values (#{questionName},#{questionType},
+                #{addTime},#{author},#{difficulty},
+                #{questionTag},#{timeLimit},#{memoryLimit},
+                #{stackLimit},#{questionDescription},#{questionInputDescription},
+                #{questionOutputDescription},#{questionExamples},#{questionSource},
+                #{questionCommits},#{ac},#{modifyTime},
+                #{status}
+               )
+    </insert>
+
+</mapper>

@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: oj_codesandbox
+
+  datasource:
+    # Mysql 5.7
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.70.1:3306/oj?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: test
+    password: 123456
+
+  rabbitmq:
+    listener:
+      simple:
+        concurrency: 5      # 最小消费者数量
+        max-concurrency: 10 # 最大消费者数量
+        prefetch: 1         # 每次预取1条消息
+        acknowledge-mode: manual # 手动确认
+    username: vm_xiaozhu
+    password: Wlj041007@
+    addresses: 43.140.224.79:5672
+    virtual-host: "/vm_host"
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+server:
+  port: 8082
+
+codesandbox:
+  type: "remote"

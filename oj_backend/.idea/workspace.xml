@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="443c61da-8e2f-4e14-a3bb-9f0c5096d42b" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2vtF2zTpe6pxKYEGqXfHbWObH9t" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ExampleCodeSandboxByFactorTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ExampleCodeSandboxTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.JudgeStrategyTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.QuestionServiceImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;HTTP Request.generated-requests | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #14.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #19.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #2.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #21.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #6.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #9.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EmailUtilTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EmailUtilTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FetchServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FetchServiceTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JavaUsePythonTest.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.JavaUsePythonTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JudgeServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JudgeServiceTest.test.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.OjBackendApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.QuestionServiceImplTest.addOne.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.QuestionServiceImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.QuestionServiceImplTest.test.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.QuestionServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.QuestionServiceTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.OjBackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/code/oj&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\oj\oj_backend\img" />
+      <recent name="D:\code\oj\oj_backend\python" />
+      <recent name="D:\code\oj\oj_backend\src\main\java\oj\oj_backend\python" />
+      <recent name="D:\code\oj\oj_backend\src\main\java\oj\oj_backend\service\python" />
+      <recent name="D:\code\oj\oj_backend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\code\oj\oj_backend" />
+      <recent name="D:\code\oj\oj_backend\python" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="oj.oj_backend" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="oj.oj_backend.service" />
+      <recent name="oj.oj_backend.mapper" />
+      <recent name="oj.oj_backend.model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.OjBackendApplication">
+    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #19" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="19" requestIdentifier="#19" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #21" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="21" requestIdentifier="#21" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="UserServiceTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oj_backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oj.oj_backend.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="oj.oj_backend.service" />
+      <option name="MAIN_CLASS_NAME" value="oj.oj_backend.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OjBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="oj_backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="oj.oj_backend.OjBackendApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oj.oj_backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="HTTP Request.generated-requests | #1" />
+      <item itemvalue="HTTP Request.generated-requests | #19" />
+      <item itemvalue="HTTP Request.generated-requests | #21" />
+      <item itemvalue="JUnit.UserServiceTest.test" />
+      <item itemvalue="Spring Boot.OjBackendApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.OjBackendApplication" />
+        <item itemvalue="HTTP Request.generated-requests | #1" />
+        <item itemvalue="JUnit.UserServiceTest.test" />
+        <item itemvalue="HTTP Request.generated-requests | #21" />
+        <item itemvalue="HTTP Request.generated-requests | #19" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="443c61da-8e2f-4e14-a3bb-9f0c5096d42b" name="Changes" comment="" />
+      <created>1744956262297</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744956262297</updated>
+      <workItem from="1744956263372" duration="37819000" />
+      <workItem from="1745767091501" duration="21920000" />
+      <workItem from="1746669867631" duration="620000" />
+      <workItem from="1746671759196" duration="5183000" />
+      <workItem from="1746707062968" duration="5023000" />
+      <workItem from="1746712102270" duration="14407000" />
+      <workItem from="1746952522539" duration="11000" />
+      <workItem from="1747239105096" duration="167000" />
+      <workItem from="1747239294184" duration="599000" />
+      <workItem from="1747381406872" duration="1384000" />
+      <workItem from="1748362093424" duration="7837000" />
+      <workItem from="1748601521279" duration="4000" />
+      <workItem from="1748605042345" duration="213000" />
+      <workItem from="1748606009828" duration="404000" />
+      <workItem from="1748612375719" duration="1134000" />
+      <workItem from="1748631302362" duration="1311000" />
+      <workItem from="1748675689471" duration="9000" />
+      <workItem from="1748718815097" duration="1578000" />
+      <workItem from="1748787782698" duration="4000" />
+      <workItem from="1748799086984" duration="3391000" />
+      <workItem from="1748937943627" duration="5392000" />
+      <workItem from="1749031109430" duration="9265000" />
+      <workItem from="1749114298694" duration="6324000" />
+      <workItem from="1749227221753" duration="1488000" />
+      <workItem from="1749314893946" duration="1037000" />
+      <workItem from="1749360171226" duration="2544000" />
+      <workItem from="1749400100381" duration="1170000" />
+      <workItem from="1749466250228" duration="2298000" />
+      <workItem from="1749534353340" duration="6221000" />
+      <workItem from="1749576559387" duration="12000" />
+      <workItem from="1749632393745" duration="1232000" />
+      <workItem from="1749633638214" duration="7000" />
+      <workItem from="1749636392024" duration="802000" />
+      <workItem from="1749661042346" duration="2217000" />
+      <workItem from="1749664519217" duration="2000" />
+      <workItem from="1749710966024" duration="4213000" />
+      <workItem from="1749741860240" duration="8636000" />
+      <workItem from="1749831328125" duration="6695000" />
+      <workItem from="1749918609110" duration="18683000" />
+      <workItem from="1750057627563" duration="11992000" />
+      <workItem from="1750098383540" duration="7257000" />
+      <workItem from="1750182832695" duration="3689000" />
+      <workItem from="1750227607798" duration="2000" />
+      <workItem from="1750229162740" duration="907000" />
+      <workItem from="1750230465282" duration="8056000" />
+      <workItem from="1750416454556" duration="3165000" />
+      <workItem from="1750660532640" duration="37556000" />
+      <workItem from="1751365652933" duration="24000" />
+      <workItem from="1751562412157" duration="702000" />
+      <workItem from="1751991832461" duration="1753000" />
+      <workItem from="1752136426171" duration="14419000" />
+      <workItem from="1752332379484" duration="681000" />
+      <workItem from="1752388202592" duration="6589000" />
+      <workItem from="1752514106186" duration="13753000" />
+      <workItem from="1752589438491" duration="4970000" />
+      <workItem from="1752738424254" duration="43067000" />
+      <workItem from="1753162884321" duration="8895000" />
+      <workItem from="1753347811372" duration="2314000" />
+      <workItem from="1753416805026" duration="5802000" />
+      <workItem from="1753596902834" duration="18246000" />
+      <workItem from="1754029493783" duration="620000" />
+      <workItem from="1754061261857" duration="1710000" />
+      <workItem from="1754128664836" duration="5432000" />
+      <workItem from="1754297430795" duration="226000" />
+      <workItem from="1754386516877" duration="4594000" />
+      <workItem from="1754486824832" duration="242000" />
+      <workItem from="1754489027100" duration="177000" />
+      <workItem from="1754490330049" duration="2190000" />
+      <workItem from="1755010186418" duration="1221000" />
+      <workItem from="1755072737014" duration="1404000" />
+      <workItem from="1755158929187" duration="1973000" />
+      <workItem from="1755162334593" duration="24000" />
+      <workItem from="1755162377438" duration="18000" />
+      <workItem from="1755163513070" duration="97000" />
+      <workItem from="1755164686911" duration="97000" />
+      <workItem from="1755164900854" duration="86000" />
+      <workItem from="1755165231822" duration="89000" />
+      <workItem from="1755165679417" duration="51000" />
+      <workItem from="1755165889151" duration="293000" />
+      <workItem from="1755166308505" duration="16000" />
+      <workItem from="1755166606739" duration="696000" />
+      <workItem from="1755167474054" duration="356000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/oj/oj_backend/judge/codesandbox/strategy/JudgeStrategyTest.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/2.1.0/mybatis-spring-2.1.0.jar!/org/mybatis/spring/mapper/MapperScannerConfigurer.class</url>
+          <line>153</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/oj/oj_backend/judge/JudgeServiceImpl.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/oj/oj_backend/service/FetchServiceTest.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="javax.mail.AuthenticationFailedException" package="javax.mail" />
+          <option name="timeStamp" value="31" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="list.get(0)" />
+      </configuration>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="((HashMap)contestMap).entrySet().toArray()[6]" custom="java.util.HashMap" />
+        <watch expression="loginVo" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

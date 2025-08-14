@@ -1,0 +1,110 @@
+GET http://localhost:8081/api/user/jwt?uuid=d996dbc8-6719-4a10-aa77-3c9f25cb48ee
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-07-17T223616.200.json
+
+###
+
+GET http://localhost:8081/api/user/jwt?uuid=eyJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZDk5NmRiYzgtNjcxOS00YTEwLWFhNzctM2M5ZjI1Y2I0OGVlIiwiZW1haWwiOiIxMTA1Nzc0NzQ3QHFxLmNvbSIsImV4cCI6MTc1MzE5NDA1OH0.WfesrTeXvlpJIWJmFlOAnlgqX9pLI0PL5hxhlNIARh8
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-07-17T223529.200.json
+
+###
+
+GET http://localhost:8081/api/user/jwt?uuid=eyJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZDk5NmRiYzgtNjcxOS00YTEwLWFhNzctM2M5ZjI1Y2I0OGVlIiwiZW1haWwiOiIxMTA1Nzc0NzQ3QHFxLmNvbSIsImV4cCI6MTc1MzE5NDA1OH0.WfesrTeXvlpJIWJmFlOAnlgqX9pLI0PL5hxhlNIARh8
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-07-17T223434.404.json
+
+###
+
+GET http://localhost:8081/api/user/jwt?uuid=eyJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZDk5NmRiYzgtNjcxOS00YTEwLWFhNzctM2M5ZjI1Y2I0OGVlIiwiZW1haWwiOiIxMTA1Nzc0NzQ3QHFxLmNvbSIsImV4cCI6MTc1MzE5NDA1OH0.WfesrTeXvlpJIWJmFlOAnlgqX9pLI0PL5hxhlNIARh8
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-07-17T223431.404.json
+
+###
+
+POST http://localhost:8081/api/user/login-or-register
+Content-Type: application/json
+{:
+"email": "1105774747@qq.com",
+"verifyCode": "123456"
+}:
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-07-15T164816.400.html
+
+###
+
+POST http://localhost:8081/api/user/login-or-register
+{:
+"email": "1105774747@qq.com",
+"verifyCode": "123456"
+}:
+Content-Type: application/json
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-07-15T152212.400.html
+
+###
+
+POST http://localhost:8081/api/user/login-or-register
+Content-Type: application/json
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-07-15T152111.400.json
+
+###
+
+POST http://localhost:8081/api/ai/chat
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-06-15T224434.400.json
+
+###
+
+GET http://localhost:8081/idolno/oj/question/test
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Cookie: JSESSIONID=EAB3B15EC02629773AC677D0FB4A01CF
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8081/idolno/oj/question/test
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Cookie: JSESSIONID=1F2EE55C846F2B2C436C63D9ADA29067
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8081/idolno/oj/question/addOneQuestion
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+

@@ -1,0 +1,6 @@
+{
+  "timestamp": "2025-07-17T14:34:31.255+00:00",
+  "status": 404,
+  "error": "Not Found",
+  "path": "/api/user/jwt"
+}

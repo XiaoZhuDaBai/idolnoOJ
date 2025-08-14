@@ -1,0 +1,6 @@
+{
+  "timestamp": "2025-07-15T07:21:10.999+00:00",
+  "status": 400,
+  "error": "Bad Request",
+  "path": "/api/user/login-or-register"
+}

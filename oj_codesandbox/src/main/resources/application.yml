@@ -5,7 +5,7 @@ spring:
   datasource:
     # Mysql 5.7
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.70.1:3306/oj?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&useServerPrepStmts=true&cachePrepStmts=true
+    url: jdbc:mysql://服务器:3306/oj?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&useServerPrepStmts=true&cachePrepStmts=true
     username: test
     password: 123456
     # 数据库连接池配置
@@ -31,9 +31,9 @@ spring:
           multiplier: 1.0   # 重试间隔倍数
           max-interval: 10000 # 最大重试间隔（毫秒）
         default-requeue-rejected: false # 拒绝的消息不重新入队
-    username: vm_xiaozhu
-    password: Wlj041007@
-    addresses: 43.140.224.79:5672
+    username: xxxxx
+    password: xxx
+    addresses: xxxxxx:5672
     virtual-host: "/vm_host"
 
 mybatis-plus:

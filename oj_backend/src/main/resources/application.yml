@@ -12,11 +12,11 @@ spring:
     # redis数据库索引(默认为0)，我们使用索引为3的数据库，避免和其他数据库冲突
     database: 3
     # redis服务器地址（默认为localhost）
-    host: 43.140.224.79
+    host: xxx
     # redis端口（默认为6379）
     port: 6379
     # redis访问密码（默认为空）
-    password: Wlj041007@
+    password: xx
     # redis连接超时时间（单位毫秒）
     timeout: 2000
 
@@ -39,13 +39,13 @@ server:
 
 # ai服务
 dashscope:
-  appId: be444ee89dd84f2cbc247c0252b00e2b
+  appId: 填写自己的appid
 
 # 个人邮箱
 feedback:
   email:
-    account: 1105774747@qq.com
-    auth: smsyyszososkbabg
+    account: 填写邮箱
+    auth: 填写认证码
 
 # 定时爬取竞赛信息时间
 schedule:

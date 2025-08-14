@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="oj.oj_backend.mapper.CommitCaseMapper">
+
+    <resultMap id="BaseResultMap" type="oj.oj_backend.model.CommitCase">
+            <id property="commitId" column="commit_id" jdbcType="VARCHAR"/>
+            <result property="cnName" column="cn_name" jdbcType="LONGVARCHAR"/>
+            <result property="englishName" column="english_name" jdbcType="LONGVARCHAR"/>
+            <result property="input" column="input" jdbcType="VARCHAR"/>
+            <result property="output" column="output" jdbcType="VARCHAR"/>
+            <result property="time" column="time" jdbcType="BIGINT"/>
+            <result property="memory" column="memory" jdbcType="BIGINT"/>
+
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        commit_id,cn_name,english_name,input,output
+    </sql>
+
+    <select id="getAllCommitCaseByPage" resultType="oj.oj_backend.model.CommitCase">
+        select * from commit_case
+        limit #{page},#{size}
+    </select>
+
+
+    <select id="getUserCommitCase" resultType="oj.oj_backend.model.CommitCase">
+
+    </select>
+</mapper>

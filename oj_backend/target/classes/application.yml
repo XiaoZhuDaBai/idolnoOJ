@@ -1,0 +1,53 @@
+spring:
+  application:
+    name: oj_backend
+  datasource:
+    # Mysql 5.7
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/oj?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password:
+
+  redis:
+    # redis数据库索引(默认为0)，我们使用索引为3的数据库，避免和其他数据库冲突
+    database: 3
+    # redis服务器地址（默认为localhost）
+    host: 43.140.224.79
+    # redis端口（默认为6379）
+    port: 6379
+    # redis访问密码（默认为空）
+    password: Wlj041007@
+    # redis连接超时时间（单位毫秒）
+    timeout: 2000
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*.xml  # 必须与主配置一致
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+server:
+  port: 8081
+  servlet:
+    context-path: /api
+    encoding:
+      force: true
+      charset: UTF-8
+  tomcat:
+    uri-encoding: UTF-8
+
+# ai服务
+dashscope:
+  appId: be444ee89dd84f2cbc247c0252b00e2b
+
+# 个人邮箱
+feedback:
+  email:
+    account: 1105774747@qq.com
+    auth: smsyyszososkbabg
+
+# 定时爬取竞赛信息时间
+schedule:
+  contest:
+    time : 10800_000 #ms

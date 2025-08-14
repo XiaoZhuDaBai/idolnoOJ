@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="oj.oj_backend.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="oj.oj_backend.model.User">
+            <id property="uuid" column="uuid" jdbcType="VARCHAR"/>
+            <result property="openid" column="openid" jdbcType="VARCHAR"/>
+            <result property="unionid" column="unionid" jdbcType="VARCHAR"/>
+            <result property="auth" column="auth" jdbcType="VARCHAR"/>
+            <result property="nickname" column="nickname" jdbcType="VARCHAR"/>
+            <result property="school" column="school" jdbcType="VARCHAR"/>
+            <result property="course" column="course" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="gender" column="gender" jdbcType="TINYINT"/>
+            <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
+            <result property="signature" column="signature" jdbcType="VARCHAR"/>
+            <result property="github" column="github" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="TINYINT"/>
+            <result property="rateWebsite" column="rate_website" jdbcType="VARCHAR"/>
+            <result property="rateScore" column="rate_score" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="modifyTime" column="modify_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        uuid,openid,unionid,
+        auth,nickname,school,
+        course,email,
+        gender,avatar,signature,
+        github,status,rate_website,
+        rate_score,create_time,modify_time
+    </sql>
+
+    <insert id="insert" parameterType="oj.oj_backend.model.User">
+        insert into user (uuid, openid, unionid, auth, nickname, school, course, email, gender, avatar, signature, github, status, rate_website, rate_score, create_time, modify_time)
+        values (#{uuid}, #{openid}, #{unionid},
+                #{auth}, #{nickname}, #{school},
+                #{course}, #{email},
+                #{gender}, #{avatar}, #{signature},
+                #{github}, #{status}, #{rateWebsite},
+                #{rateScore}, #{createTime}, #{modifyTime})
+    </insert>
+
+    <select id="getUUId" resultType="java.lang.String">
+        select uuid from user where email = #{email}
+    </select>
+
+    <select id="getMyRecentSubmission" resultType="oj.oj_backend.model.response.MyRecentSubmissionResponse">
+        SELECT
+            q.question_name AS title,
+            cc.cn_name,
+            uc.create_time
+        FROM user_commit uc
+                 INNER JOIN user u ON uc.uid = u.uuid
+                 LEFT JOIN commit_case cc ON uc.commit_id = cc.commit_id
+                 LEFT JOIN question q ON uc.qid = q.question_id
+        WHERE u.uuid = #{uuid}
+          AND uc.create_time >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)
+        ORDER BY uc.create_time DESC
+            limit #{page},5
+    </select>
+
+    <select id="getMyRecentSubmissionCount" resultType="java.lang.Integer">
+        SELECT
+        COUNT(uc.id)
+        FROM user_commit uc
+                 INNER JOIN user u ON uc.uid = u.uuid
+                 LEFT JOIN commit_case cc ON uc.commit_id = cc.commit_id
+                 LEFT JOIN question q ON uc.qid = q.question_id
+        WHERE u.uuid = #{uuid}
+          AND uc.create_time >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)
+    </select>
+
+    <select id="getMyRecentWrongSubmission" resultType="oj.oj_backend.model.response.MyRecentWrongSubmissionResponse">
+        SELECT
+            q.question_id AS problemId,
+            q.question_name AS problemName,
+            COUNT(DISTINCT uc.id) AS tryCount
+        FROM user_commit uc
+                 INNER JOIN user u ON uc.uid = u.uuid AND u.uuid = #{uuid}
+                 LEFT JOIN commit_case cc ON uc.commit_id = cc.commit_id
+                 LEFT JOIN question q ON uc.qid = q.question_id
+                 LEFT JOIN (
+            SELECT DISTINCT uc_pass.qid
+            FROM user_commit uc_pass
+                     JOIN commit_case cc_pass ON uc_pass.commit_id = cc_pass.commit_id AND cc_pass.cn_name = '通过'
+            WHERE uc_pass.uid = #{uuid}
+              AND uc_pass.create_time >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)
+        ) passed_questions ON passed_questions.qid = q.question_id
+        WHERE uc.create_time >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)
+          AND q.question_id IS NOT NULL
+          AND passed_questions.qid IS NULL
+        GROUP BY q.question_id, q.question_name
+        HAVING SUM(cc.cn_name IS NULL OR cc.cn_name != '通过') > 0
+        ORDER BY tryCount DESC;
+    </select>
+
+    <select id="getMySubmissionData" resultType="oj.oj_backend.model.response.MySubmissionDataResponse">
+        SELECT
+            d.date_value AS time,
+            IFNULL(COUNT(DISTINCT uc.id), 0) AS commitCount,
+            IFNULL(COUNT(DISTINCT CASE WHEN cc.cn_name = '通过' THEN uc.id END), 0) AS acCount
+        FROM
+            (
+                SELECT CURRENT_DATE() AS date_value UNION ALL
+                SELECT DATE_SUB(CURRENT_DATE(), INTERVAL 1 DAY) UNION ALL
+                SELECT DATE_SUB(CURRENT_DATE(), INTERVAL 2 DAY) UNION ALL
+                SELECT DATE_SUB(CURRENT_DATE(), INTERVAL 3 DAY) UNION ALL
+                SELECT DATE_SUB(CURRENT_DATE(), INTERVAL 4 DAY) UNION ALL
+                SELECT DATE_SUB(CURRENT_DATE(), INTERVAL 5 DAY) UNION ALL
+                SELECT DATE_SUB(CURRENT_DATE(), INTERVAL 6 DAY)
+            ) d
+                LEFT JOIN
+            user_commit uc ON DATE(uc.create_time) = d.date_value AND uc.uid = #{uuid}
+            LEFT JOIN
+            commit_case cc ON uc.commit_id = cc.commit_id
+        GROUP BY
+            d.date_value
+        ORDER BY
+            d.date_value DESC;
+    </select>
+
+    <select id="getCommits" resultType="oj.oj_backend.model.response.SubmissionResponse">
+        SELECT
+        q.question_name AS problemName,
+        u.avatar AS avatar,
+        u.nickname AS nickname,
+        cc.cn_name AS commitCase,
+        cc.time AS time,
+        cc.memory AS memory,
+        uc.create_time AS createTime,
+        uc.code AS code,
+        uc.language AS language
+        FROM user_commit uc
+        LEFT JOIN user u ON uc.uid = u.uuid
+        LEFT JOIN commit_case cc ON uc.commit_id = cc.commit_id
+        LEFT JOIN question q ON uc.qid = q.question_id
+        <where>
+            <if test="problemName != null and problemName != ''">
+                AND q.question_name LIKE CONCAT('%', #{problemName}, '%')
+            </if>
+            <if test="language != null and language != ''">
+                AND uc.language = #{language}
+            </if>
+            <if test="status != null and status != ''">
+                AND cc.cn_name = #{status}
+            </if>
+            <choose>
+                <when test="userType == 'me'">
+                    AND uc.uid = #{uuid}
+                </when>
+                <when test="userType == 'others'">
+                    AND uc.uid != #{uuid}
+                </when>
+            </choose>
+        </where>
+        ORDER BY uc.create_time DESC
+        LIMIT #{page}, 15
+    </select>
+
+    <select id="getCommitsCount" resultType="java.lang.Integer">
+        SELECT
+        COUNT(*)
+        FROM user_commit uc
+        LEFT JOIN user u ON uc.uid = u.uuid
+        LEFT JOIN commit_case cc ON uc.commit_id = cc.commit_id
+        LEFT JOIN question q ON uc.qid = q.question_id
+        <where>
+            <if test="problemName != null and problemName != ''">
+                AND q.question_name LIKE CONCAT('%', #{problemName}, '%')
+            </if>
+            <if test="language != null and language != ''">
+                AND uc.language = #{language}
+            </if>
+            <if test="status != null and status != ''">
+                AND cc.cn_name = #{status}
+            </if>
+            <choose>
+                <when test="userType == 'me'">
+                    AND uc.uid = #{uuid}
+                </when>
+                <when test="userType == 'others'">
+                    AND uc.uid != #{uuid}
+                </when>
+            </choose>
+        </where>
+        ORDER BY uc.create_time DESC
+    </select>
+
+</mapper>

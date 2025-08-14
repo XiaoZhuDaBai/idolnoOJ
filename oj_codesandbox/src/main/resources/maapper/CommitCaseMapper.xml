@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="oj.oj_codesandbox.mapper.CommitCaseMapper">
+
+    <resultMap id="BaseResultMap" type="oj.oj_codesandbox.model.dto.CommitCase">
+        <id property="commitId" column="commit_id" jdbcType="VARCHAR"/>
+        <result property="cnName" column="cn_name" jdbcType="LONGVARCHAR"/>
+        <result property="englishName" column="english_name" jdbcType="LONGVARCHAR"/>
+        <result property="input" column="input" jdbcType="VARCHAR"/>
+        <result property="output" column="output" jdbcType="VARCHAR"/>
+        <result property="time" column="time" jdbcType="BIGINT"/>
+        <result property="memory" column="memory" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        commit_id,cn_name,english_name,input,output
+    </sql>
+
+    <insert id="insert" parameterType="oj.oj_codesandbox.model.dto.CommitCase">
+        insert into user_commit (commitId, cnName, englishName,
+                                 input, output, time, memory
+        )
+        values (#{commitId},#{cnName},#{englishName},
+                #{input},#{output}, #{time}, #{memory}
+               )
+    </insert>
+</mapper>

@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: oj_codesandbox
+
+  datasource:
+    # Mysql 5.7
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.70.1:3306/oj?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&useServerPrepStmts=true&cachePrepStmts=true
+    username: test
+    password: 123456
+    # 数据库连接池配置
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      connection-test-query: SELECT 1
+
+  rabbitmq:
+    listener:
+      simple:
+        concurrency: 10     # 增加最小消费者数量
+        max-concurrency: 20 # 增加最大消费者数量
+        prefetch: 10        # 增加预取数量，提高吞吐量
+        acknowledge-mode: auto # 自动确认
+        retry:
+          enabled: true     # 启用重试
+          initial-interval: 1000 # 初始重试间隔（毫秒）
+          max-attempts: 3   # 最大重试次数
+          multiplier: 1.0   # 重试间隔倍数
+          max-interval: 10000 # 最大重试间隔（毫秒）
+        default-requeue-rejected: false # 拒绝的消息不重新入队
+    username: vm_xiaozhu
+    password: Wlj041007@
+    addresses: 43.140.224.79:5672
+    virtual-host: "/vm_host"
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+server:
+  port: 8082
+
+codesandbox:
+  type: "remote"

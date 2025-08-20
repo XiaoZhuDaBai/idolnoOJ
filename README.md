@@ -1,6 +1,6 @@
 # 🚀 idolnoOJ - 智能在线判题系统
 
-> 一个功能完整的在线判题系统，支持多语言代码提交、竞赛日历、AI互动问答、题目检索优化和代码沙箱等服务。系统能够根据管理员预设的测试数据对用户代码进行执行和测评，且自主实现的代码沙箱可作为独立服务供其他开发者调用。
+> 一个功能较为完整的在线判题系统，支持多语言代码提交、竞赛日历、AI互动问答、题目检索优化和代码沙箱等服务。系统能够根据管理员预设的测试数据对用户代码进行执行和测评，且自主实现的代码沙箱可作为独立服务供其他开发者调用。
 
 [![Java](https://img.shields.io/badge/Java-11+-orange.svg)](https://openjdk.java.net/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7+-green.svg)](https://spring.io/projects/spring-boot)
@@ -12,7 +12,7 @@
 
 ### 🔒 安全可靠的代码执行
 - **Docker容器隔离**: 基于Docker的代码执行环境，防止恶意代码攻击
-- **多语言支持**: 支持Java、Python、C++等多种编程语言
+- **多语言支持**: 基于模板方法，可支持多种编程语言，轻松扩展
 - **资源限制**: 内存、CPU、执行时间等资源使用限制
 - **沙箱隔离**: 完全隔离的执行环境，确保系统安全
 
@@ -172,29 +172,3 @@ spring:
 
 ### Docker配置
 确保Docker服务已启动，并配置相应的权限。
-
-## 🤝 贡献指南
-
-1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 创建 Pull Request
-
-## 📄 许可证
-
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
-
-## 📞 联系我们
-
-- **项目地址**: [https://github.com/XiaoZhuDaBai/idolnoOJ](https://github.com/XiaoZhuDaBai/idolnoOJ)
-- **问题反馈**: [Issues](https://github.com/XiaoZhuDaBai/idolnoOJ/issues)
-- **功能建议**: [Discussions](https://github.com/XiaoZhuDaBai/idolnoOJ/discussions)
-
-## ⭐ 如果这个项目对您有帮助，请给我们一个星标！
-
----
-
-**idolnoOJ** - 让编程学习更简单，让代码评测更智能！ 🎯
-
-
